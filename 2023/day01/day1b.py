@@ -1,4 +1,4 @@
-sum = 0
+SUM = 0
 string_values = {
     "one": "o1e", 
     "two": "t2o", 
@@ -23,6 +23,6 @@ with open('day1.txt', 'r') as f:
     for line in lines:
         replaced_line = replaceLine(line)
         digits = [char for char in replaced_line if char.isdigit()]
-        sum += int(digits[0]+digits[-1])
+        SUM += int(digits[0]+digits[-1])
 
-print(sum)
+print(SUM)
