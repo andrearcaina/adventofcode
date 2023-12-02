@@ -18,21 +18,11 @@ def replaceLine(line):
     return line
 
 with open('day1.txt', 'r') as f:
-    lines = []
-    string = ''
-
-    for line in f:
-        line_split = "".join(line.split())
-        lines.append(line_split)
+    lines, digits = ["".join(line.split()) for line in f], []
 
     for line in lines:
-        line = replaceLine(line)
-        
-        for char in line:
-            if char.isdigit():
-                string += char
-        
-        sum += int(string[0]+string[-1])
-        string = ''
+        replaced_line = replaceLine(line)
+        digits = [char for char in replaced_line if char.isdigit()]
+        sum += int(digits[0]+digits[-1])
 
 print(sum)
