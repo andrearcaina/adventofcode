@@ -11,14 +11,10 @@ with open('day3.txt', 'r') as f:
 
     for r, row in enumerate(lines):
         for c, ch in enumerate(row):
-            if ch.isdigit() or ch == '.':
-                continue
-            else: 
+            if ch not in '0123456789.':
                 for x in range(r - 1, r + 2):
                     for y in range(c - 1, c + 2):
-                        if x < 0 or x >= len(lines) or y < 0 or y >= len(lines[x]) or not lines[x][y].isdigit():
-                            continue
-                        else:
+                        if 0 <= x < len(lines) and 0 <= y < len(lines[x]) and lines[x][y].isdigit():
                             while y > 0 and lines[x][y - 1].isdigit():
                                 y -= 1
                             coords.add((x, y))
