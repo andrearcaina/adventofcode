@@ -20,16 +20,15 @@ with open('day3.txt', 'r') as f:
                             coords.add((x, y))
 
     adjacent_numbs = []
-    
     coords = list(coords)
 
     for tup in coords:
         ch = ''
-        x, y = tup[0], tup[1]
+        row, col = tup[0], tup[1]
 
-        while y < len(lines[r]) and lines[x][y].isdigit():
-            ch += lines[x][y]
-            y += 1
+        while col < len(lines[row]) and lines[row][col].isdigit():
+            ch += lines[row][col]
+            col += 1
         adjacent_numbs.append(int(ch))
 
     SUM = sum(adjacent_numbs)
