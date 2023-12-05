@@ -19,7 +19,7 @@ with open('day4.txt', 'r') as f:
 
         # for first line, which is CARD #1
         # {41, 48, 83, 86, 17} and {83, 86, 6, 31, 17, 9, 48, 53}
-        # basically, from CARD+1 which is the next card, so CARD #2 to CARD #2 + total matching numbers
+        # basically, from card_num+1 which is the next card, so CARD #2 to CARD #2 + total matching numbers
         # so, CARD #2 + 4 (since there are 4 matching numbers) = CARD #6, but range is exclusive, so to CARD #5
         # then get the value of CARD #2, otherwise return 1 if it doesnt exist and add it the value of the previous card
         # iterate when done
