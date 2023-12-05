@@ -2,7 +2,7 @@ points = 0
 
 with open('day4.txt', 'r') as f:
     for line in f:
-        line = line.strip().split(': ')[1].split("|")
+        line = line.strip().split(': ')[1].split('|')
         
         current_numbs = {int(numb) for numb in line[0].split()}
         winning_numbs = {int(numb) for numb in line[1].split()}
