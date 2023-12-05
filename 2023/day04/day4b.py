@@ -21,8 +21,8 @@ with open('day4.txt', 'r') as f:
         # {41, 48, 83, 86, 17} and {83, 86, 6, 31, 17, 9, 48, 53}
         # basically, from card_num+1 which is the next card, so CARD #2 to CARD #2 + total matching numbers
         # so, CARD #2 + 4 (since there are 4 matching numbers) = CARD #6, but range is exclusive, so to CARD #5
-        # then get the value of CARD #2, otherwise return 1 if it doesnt exist and add it the value of the previous card
-        # iterate when done
+        # then get the value of CARD #2, otherwise return 1 if it doesnt exist and add it the value of CARD #1
+        # it then iterates again when done
         for num in range(card_num + 1, card_num + 1 + matching):
             card = 'Card #'+str(num)
             copies[card] = copies.get(card, 1) + copies[CARD]
