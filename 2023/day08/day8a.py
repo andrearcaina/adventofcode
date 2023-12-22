@@ -18,5 +18,5 @@ with open('day8.txt', 'r') as f:
         traverse = 0 if steps[0] == 'L' else 1
         current = tree[current][traverse]
         steps = steps[1:] + [steps[0]]
-        
-    print(count)
+
+print(count)
