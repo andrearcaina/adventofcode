@@ -26,4 +26,4 @@ with open('day9.txt', 'r') as f:
     for report in OASIS:
         total += extrapolate(report)
 
-    print(total)
+print(total)
